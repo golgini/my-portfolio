@@ -37,6 +37,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: transform 200ms ease;
 }
 
+.process-plate polygon:focus-visible {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .process-plate { transition: none; }
 }

@@ -60,7 +60,7 @@ export const Navbar = () => {
           {profile.shortName}
         </a>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-5 md:flex">
           {navigationItems.map((item) => (
             <a
               key={item.id}
@@ -72,7 +72,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <button
             type="button"
             onClick={toggle}
@@ -88,7 +88,7 @@ export const Navbar = () => {
 
         <button
           type="button"
-          className="rounded-lg border border-border p-2 text-muted focus:outline-none focus:ring-2 focus:ring-accent lg:hidden"
+          className="rounded-lg border border-border p-2 text-muted focus:outline-none focus:ring-2 focus:ring-accent md:hidden"
           onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
@@ -99,7 +99,7 @@ export const Navbar = () => {
       </nav>
 
       {menuOpen && (
-        <div id="mobile-navigation" className="border-t border-border bg-surface px-6 py-4 lg:hidden">
+        <div id="mobile-navigation" className="border-t border-border bg-surface px-6 py-4 md:hidden">
           <div className="flex flex-col gap-1">
             {navigationItems.map((item) => (
               <a

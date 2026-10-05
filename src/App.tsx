@@ -12,8 +12,11 @@ import { Toolbox } from './sections/Toolbox'
 export const App = () => {
   return (
     <div className="min-h-screen bg-bg text-text">
+      <a href="#main-content" className="sr-only z-50 rounded-lg bg-accent px-4 py-2 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:outline-none focus:ring-2 focus:ring-accent">
+        Skip to content
+      </a>
       <Navbar />
-      <main className="mx-auto max-w-6xl px-6">
+      <main id="main-content" className="mx-auto max-w-6xl px-6">
         <Hero />
         <Process />
         <Toolbox />
