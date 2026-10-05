@@ -1,4 +1,5 @@
 import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
 import { Contact } from './sections/Contact'
 import { Education } from './sections/Education'
 import { Engagements } from './sections/Engagements'
@@ -22,7 +23,7 @@ export const App = () => {
         <Engagements />
         <Contact />
       </main>
-      <footer className="border-t border-border px-6 py-8 text-center text-sm text-muted">Footer placeholder</footer>
+      <Footer />
     </div>
   )
 }
