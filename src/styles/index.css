@@ -40,3 +40,43 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .process-plate { transition: none; }
 }
+
+.skills-marquee {
+  overflow: hidden;
+  outline: none;
+}
+
+.skills-marquee:focus-visible {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.skills-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: skills-marquee 28s linear infinite;
+}
+
+.skills-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.skills-marquee:hover .skills-marquee-track,
+.skills-marquee:focus-within .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes skills-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee { overflow: visible; }
+  .skills-marquee-track { width: auto; animation: none; flex-wrap: wrap; gap: 0.5rem; }
+  .skills-marquee-group { flex-wrap: wrap; padding-right: 0; }
+  .skills-marquee-group[aria-hidden='true'] { display: none; }
+}
