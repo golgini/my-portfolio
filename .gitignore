@@ -4,3 +4,6 @@ dist
 .env.*
 !.env.example
 *.local
+.DS_Store
+Thumbs.db
+*.swp
