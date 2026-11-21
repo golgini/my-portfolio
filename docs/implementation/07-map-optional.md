@@ -20,4 +20,4 @@ A small interactive Kenya map in the hero or a modal, showing only true facts: w
 - Build and lint pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/07-map-optional.md. Do stage 07 only. Do not invent geographic data; if you cannot get a real GeoJSON, stop and ask me."
+"Read docs/implementation/00-rules.md and docs/implementation/07-map-optional.md. Do stage 07 only. Do not invent geographic data; if you cannot get a real GeoJSON, stop and ask me."

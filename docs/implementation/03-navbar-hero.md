@@ -28,4 +28,4 @@ A sticky navbar with theme toggle, and a hero that says who Sammy is and what ro
 - Build and lint pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/03-navbar-hero.md. Do stage 03 only, using data from src/data/profile.ts. Run build and lint, then commit."
+"Read docs/implementation/00-rules.md and docs/implementation/03-navbar-hero.md. Do stage 03 only, using data from src/data/profile.ts. Run build and lint, then commit."

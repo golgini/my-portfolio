@@ -16,7 +16,7 @@ A public repository and a live URL.
 ## Done when
 - The site is live and the README link works.
 - The repo contains no phone number or private data.
-- `CONTENT-TODO.md` is empty or has only items I chose to postpone.
+- `docs/content-todo.md` is empty or has only items I chose to postpone.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/10-deploy.md. Do stage 10 only. Ask me which host to use before changing any deploy config, and do not publish anything without my confirmation."
+"Read docs/implementation/00-rules.md and docs/implementation/10-deploy.md. Do stage 10 only. Ask me which host to use before changing any deploy config, and do not publish anything without my confirmation."

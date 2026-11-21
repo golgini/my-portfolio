@@ -25,4 +25,4 @@ A filterable project grid that shows the final-year project first and makes each
 - Build and lint pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/06-projects.md. Do stage 06 only, reading from src/data/projects.ts and src/data/utils.ts. Run build and lint, then commit."
+"Read docs/implementation/00-rules.md and docs/implementation/06-projects.md. Do stage 06 only, reading from src/data/projects.ts and src/data/utils.ts. Run build and lint, then commit."

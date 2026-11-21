@@ -1,6 +1,7 @@
 import { SectionTitle } from '../components/SectionTitle'
 import { useMemo, useRef, useState } from 'react'
 import { ProjectCard } from '../components/ProjectCard'
+import { Reveal } from '../components/Reveal'
 import { ProjectDialog } from '../components/ProjectDialog'
 import { SHOW_MAP } from '../config'
 import { projects } from '../data/projects'
@@ -39,8 +40,10 @@ export const Projects = () => {
       </div>
       {visibleProjects.length > 0 ? (
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
-          {visibleProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} onOpen={(trigger) => { triggerRef.current = trigger; setSelectedProject(project) }} />
+          {visibleProjects.map((project, index) => (
+            <Reveal key={project.id} delay={index * 90} className="h-full">
+              <ProjectCard project={project} onOpen={(trigger) => { triggerRef.current = trigger; setSelectedProject(project) }} />
+            </Reveal>
           ))}
         </div>
       ) : <p className="mt-8 rounded-2xl border border-dashed border-border p-8 text-center text-muted">No projects in this category yet.</p>}

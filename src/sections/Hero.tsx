@@ -5,12 +5,17 @@ import { isTodo } from '../data/utils'
 export const Hero = () => (
   <section id="home" className="scroll-mt-[72px] border-b border-border py-12 sm:py-16 lg:min-h-[calc(100vh-72px)] lg:py-20">
     <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-      <div>
+      <div className="flex items-start gap-4 sm:gap-6">
+        <div className="hero-rail" aria-hidden="true">
+          <span className="hero-rail-dot" />
+          <span className="hero-rail-line" />
+        </div>
+        <div>
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-muted">Hi, I&apos;m</p>
-        <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-text sm:text-5xl">
-          <span className="text-accent">{profile.name}</span>
+        <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-text sm:text-5xl lg:text-6xl">
+          <span className="reference-gradient-text">{profile.name}</span>
         </h1>
-        <p className="mt-5 text-lg font-semibold text-text">{profile.title}</p>
+        <p className="mt-5 text-lg font-semibold text-text sm:text-xl">{profile.title}</p>
         <p className="mt-4 max-w-[60ch] leading-8 text-muted">{profile.tagline}</p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -44,16 +49,32 @@ export const Hero = () => (
             </div>
           ))}
         </div>
+        </div>
       </div>
 
-      <div aria-hidden="true" className="rounded-2xl border border-border bg-surface p-4 shadow-lg sm:p-6">
-        <div className="rounded-xl border border-border bg-bg p-5 font-mono text-xs leading-7 text-muted sm:text-sm">
+      <div aria-hidden="true" className="hero-visual rounded-2xl border border-border bg-surface p-4 shadow-lg sm:p-6">
+        <div className="hero-signal-grid" />
+        <div className="cyber-scene">
+          <div className="cyber-orbit cyber-orbit-one" />
+          <div className="cyber-orbit cyber-orbit-two" />
+          <div className="cyber-globe">
+            <div className="cyber-globe-meridian cyber-globe-meridian-one" />
+            <div className="cyber-globe-meridian cyber-globe-meridian-two" />
+            {Array.from({ length: 8 }, (_, index) => <span key={index} className={`cyber-node cyber-node-${index + 1}`} />)}
+          </div>
+          <span className="cyber-scan-beam" />
+        </div>
+        <div className="hero-console rounded-xl border border-border bg-bg p-5 font-mono text-xs leading-7 text-muted sm:text-sm">
+          <div className="mb-4 flex items-center gap-2 border-b border-border pb-3 text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_12px_theme(colors.green.400)]" />
+            live analysis node
+          </div>
           <p className="text-accent">$ analyze --email sample.eml</p>
-          <p className="mt-4"><span className="text-green-400">[ok]</span> header check: passed</p>
-          <p><span className="text-green-400">[ok]</span> link check: no suspicious links</p>
-          <p><span className="text-green-400">[ok]</span> attachment scan: no hidden data found</p>
+          <p className="terminal-line terminal-line-one mt-4"><span className="text-green-400">[ok]</span> header check: passed</p>
+          <p className="terminal-line terminal-line-two"><span className="text-green-400">[ok]</span> link check: no suspicious links</p>
+          <p className="terminal-line terminal-line-three"><span className="text-green-400">[ok]</span> attachment scan: no hidden data found</p>
           <div className="mt-5 h-px bg-border" />
-          <p className="mt-4 text-accent">analysis complete</p>
+          <p className="terminal-line terminal-line-four mt-4 text-accent">analysis complete <span className="terminal-cursor">▌</span></p>
         </div>
       </div>
     </div>

@@ -21,4 +21,4 @@ Show growth over time honestly. Sammy has no paid jobs yet, so this section is a
 - Build and lint pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/08-journey-education.md. Do stage 08 only, reading from journey.ts, education.ts and engagements.ts. Run build and lint, then commit."
+"Read docs/implementation/00-rules.md and docs/implementation/08-journey-education.md. Do stage 08 only, reading from journey.ts, education.ts and engagements.ts. Run build and lint, then commit."

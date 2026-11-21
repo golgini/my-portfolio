@@ -33,4 +33,4 @@ Single-page portfolio for Sammy Moseti Gesabo, a Computer Security & Forensics g
 - Make one git commit per stage with the message "stage NN: <name>".
 
 ## Message to paste
-"Read stages/00-rules.md and follow it for this whole project. Confirm you understand, and list any questions. Do not write code yet."
+"Read docs/implementation/00-rules.md and follow it for this whole project. Confirm you understand, and list any questions. Do not write code yet."

@@ -121,4 +121,4 @@ export const engagements = [
 - No placeholder text looks like real information.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/02-content-data.md. Do stage 02 only: create every data file exactly as written, plus utils.ts with isTodo and types.ts. Do not build UI. Run build and commit."
+"Read docs/implementation/00-rules.md and docs/implementation/02-content-data.md. Do stage 02 only: create every data file exactly as written, plus utils.ts with isTodo and types.ts. Do not build UI. Run build and commit."

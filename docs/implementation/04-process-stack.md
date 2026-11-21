@@ -24,4 +24,4 @@ The signature interactive section: an isometric stack of six layers and a step c
 - Build and lint pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/04-process-stack.md. Do stage 04 only. If the isometric look is off, tell me and propose a fix instead of leaving it broken. Run build and lint, then commit."
+"Read docs/implementation/00-rules.md and docs/implementation/04-process-stack.md. Do stage 04 only. If the isometric look is off, tell me and propose a fix instead of leaving it broken. Run build and lint, then commit."

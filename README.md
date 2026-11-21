@@ -1,33 +1,48 @@
-# Sammy Moseti Gesabo — Portfolio
+# Sammy Moseti Gesabo — Cybersecurity Portfolio
 
-Sammy Moseti Gesabo’s single-page portfolio presents Computer Security & Forensics work for recruiters and hiring managers seeking entry-level SOC Analyst, Digital Forensic Investigator, and Security Analyst candidates.
+Personal portfolio for Sammy Moseti Gesabo, a Computer Security and Forensics student focused on security analysis, digital forensics, automation, and practical machine-learning projects.
 
-## Status
+The site is designed for recruiters, hiring managers, and technical collaborators looking for an entry-level SOC Analyst, Security Analyst, or Digital Forensics candidate.
 
-Live URL: `https://your-project.vercel.app/` (placeholder until the first Vercel deployment)
+## Overview
 
-## Screenshots
+This single-page portfolio presents:
 
-Add light-theme and dark-theme screenshots here after the first visual review:
+- A concise professional introduction and contact links
+- A layered view of Sammy’s security workflow
+- Technical skills, tools, and working strengths
+- Selected security, machine-learning, and trading projects
+- A journey timeline covering education, independent work, and training
+- Education, community engagement, and a direct contact section
 
-<!-- Light theme screenshot: docs/screenshots/light.png -->
-<!-- Dark theme screenshot: docs/screenshots/dark.png -->
+Incomplete personal details are marked as `TODO` in the typed data files and are automatically hidden from the public interface until they are confirmed.
 
-## Tech stack
+## Technology
 
-- Vite, React 18, TypeScript (strict)
-- Tailwind CSS and lucide-react
+- React 18 with TypeScript in strict mode
+- Vite for development and production builds
+- Tailwind CSS for styling and responsive layouts
+- Lucide React for interface icons
 - Self-hosted Plus Jakarta Sans via `@fontsource`
 - No backend, database, analytics, or runtime CDN dependencies
 
-## Run locally
+## Getting started
+
+### Requirements
+
+- Node.js 18 or newer
+- npm
+
+### Install and run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Production checks:
+Vite will print the local development URL, normally `http://localhost:5173`.
+
+### Production checks
 
 ```bash
 npm run lint
@@ -35,25 +50,43 @@ npm run build
 npm run preview
 ```
 
-## Edit content
+## Content management
 
-All portfolio content lives in typed files under `src/data/`:
+Portfolio content is kept separate from the UI in typed files under [`src/data/`](src/data/):
 
-- `profile.ts` — identity, summary, contact links, and stats
-- `process.ts` — process layers
+- `profile.ts` — identity, summary, contact links, and headline statistics
+- `process.ts` — security process layers
 - `skills.ts` — toolbox groups and soft skills
-- `projects.ts` — project cards and details
+- `projects.ts` — project cards and project details
 - `journey.ts` — study, project, and training timeline
 - `education.ts` — education records
 - `engagements.ts` — training and community engagements
 
-Replace `TODO` values only with confirmed information. TODO values are hidden from the UI. See [`CONTENT-TODO.md`](CONTENT-TODO.md) for the current inventory.
+See [`docs/content-todo.md`](docs/content-todo.md) for the current list of details that still need confirmation.
 
-## Deploy with Vercel
+## Project structure
 
-Import this repository in the Vercel dashboard and use the Vite preset. No additional Vercel configuration is required.
+```text
+src/
+├── components/   Reusable interface components
+├── data/         Typed portfolio content
+├── hooks/        Reusable React hooks
+├── sections/     Page-level portfolio sections
+└── styles/       Global styles and theme tokens
+docs/             Implementation notes and content planning
+public/           Static assets served as-is
+scripts/          Local validation scripts
+```
 
-To create a GitHub repository and push the current local history, run these commands after creating an empty repository on GitHub:
+The numbered implementation notes are available in [`docs/implementation/`](docs/implementation/).
+
+## Deployment
+
+The project is ready to deploy as a Vite site on Vercel. Import the repository, select the Vite preset, and deploy with the default settings. No additional Vercel configuration is required.
+
+Live URL: `https://your-project.vercel.app/` *(replace after the first deployment)*
+
+To publish through GitHub and Vercel:
 
 ```bash
 git branch -M main
@@ -61,8 +94,8 @@ git remote add origin https://github.com/<your-username>/sammy-portfolio.git
 git push -u origin main
 ```
 
-Then in Vercel: **Add New Project** → select the GitHub repository → confirm the Vite preset → **Deploy**. Update the Live URL above after deployment.
+Then import the repository in Vercel and confirm the Vite build preset.
 
 ## License
 
-MIT License. See [`LICENSE`](LICENSE).
+This project is released under the MIT License. See [`LICENSE`](LICENSE).

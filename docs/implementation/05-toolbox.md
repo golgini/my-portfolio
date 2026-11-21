@@ -19,4 +19,4 @@ Show what Sammy can actually use, grouped so a recruiter can scan it in seconds.
 - Build and lint pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/05-toolbox.md. Do stage 05 only, reading from src/data/skills.ts. Run build and lint, then commit."
+"Read docs/implementation/00-rules.md and docs/implementation/05-toolbox.md. Do stage 05 only, reading from src/data/skills.ts. Run build and lint, then commit."

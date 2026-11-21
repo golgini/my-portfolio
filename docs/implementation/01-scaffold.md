@@ -15,7 +15,7 @@ src/
   styles/        index.css
   App.tsx, main.tsx
 public/
-stages/
+docs/implementation/
 ```
 3. Theme tokens in `index.css` as CSS variables for light and dark: `--bg, --surface, --border, --text, --muted, --accent`. Dark values: bg near `#0b1220`, surface `#111a2e`, border `#22304a`, text `#e6edf7`, muted `#8fa0b8`, accent `#3b82f6`. Light values: bg `#f7f9fc`, surface `#ffffff`, border `#dbe3ee`, text `#0f172a`, muted `#5b6b82`, accent `#1d6fe0`. Map them in the Tailwind config so classes like `bg-surface` and `text-accent` work.
 4. `useTheme` hook: returns `theme` and `toggle`. Reads `localStorage` then `prefers-color-scheme`, sets `data-theme` on `<html>`, saves choice in try/catch.
@@ -29,4 +29,4 @@ stages/
 - `npm run build` and `npm run lint` pass.
 
 ## Message to paste
-"Read stages/00-rules.md and stages/01-scaffold.md. Do stage 01 only. Run build and lint at the end and commit."
+"Read docs/implementation/00-rules.md and docs/implementation/01-scaffold.md. Do stage 01 only. Run build and lint at the end and commit."

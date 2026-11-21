@@ -12,7 +12,7 @@ export const ProjectCard = ({ project, onOpen }: ProjectCardProps) => {
   const visibleTech = project.tech.filter((technology) => !isTodo(technology))
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm transition-shadow hover:shadow-lg">
+    <article className="interactive-card flex h-full flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm transition-shadow hover:shadow-lg">
       <button type="button" onClick={(event) => onOpen(event.currentTarget)} className="text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface">
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-semibold text-accent">{project.category}</span>
