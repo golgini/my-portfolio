@@ -25,17 +25,17 @@ export type EducationItem = { id: string; period: string; title: string; institu
 export const profile = {
   name: "Sammy Moseti Gesabo",
   shortName: "Sammy",
-  title: "Computer Security & Forensics Graduate",
+  title: "Computer Security & Forensics Specialist",
   tagline: "Entry-level SOC Analyst, Digital Forensic Investigator or Security Analyst, with a long-term interest in security automation and threat detection.",
   location: "Nairobi, Kenya",
   email: "sammygesabo@gmail.com",
   linkedin: "https://www.linkedin.com/in/sammy-gesabo-895b49410",
   github: "TODO: GitHub URL",
-  about: "Final-semester BSc Computer Security and Forensics student at Kabarak University. I combine academic training in digital forensics and network security with independently built projects in algorithmic systems and AI-assisted security tooling.",
+  about: "Computer Security and Forensics specialist focused on cybersecurity, secure infrastructure, digital investigations and practical security engineering.",
   stats: [
     { value: "12", label: "Phases in my AI trading system" },
     { value: "3", label: "Languages: Python, MQL5, Pine Script" },
-    { value: "Dec 2026", label: "Expected graduation" },
+    { value: "Kenya", label: "Professional base" },
   ],
 };
 ```
@@ -95,16 +95,16 @@ Status for the two personal projects: confirm "Completed" before publishing.
 ### `journey.ts` (replaces "Work Experience": the CV has no jobs, so do not invent any)
 ```ts
 export const journey = [
-  { id: "study", start: "TODO: start year", end: "Dec 2026", title: "BSc Computer Security and Forensics", org: "Kabarak University", bullets: ["Final year of study", "TODO: key modules"] },
+  { id: "study", start: "Academic", end: "Kabarak University", title: "BSc Computer Security and Forensics", org: "Kabarak University", bullets: ["Digital forensics, network security and computer security foundations"] },
   { id: "projects", start: "TODO", end: "Present", title: "Independent engineering projects", org: "Personal", bullets: ["AI forex trading system (LightGBM, OANDA, Ollama)", "MQL5 Expert Advisors and Pine Script indicators"] },
   { id: "labs", start: "TODO", end: "Present", title: "Self-directed security training", org: "OverTheWire Bandit, pwn.college", bullets: ["Building Linux command-line and exploitation fundamentals ahead of CTF competitions"] },
-  { id: "capstone", start: "TODO", end: "Dec 2026", title: "Final-year project", org: "Kabarak University", bullets: ["AI-powered anti-phishing and steganography detection system"] },
+  { id: "capstone", start: "Project", end: "In progress", title: "AI-powered anti-phishing and steganography detection system", org: "Kabarak University", bullets: ["Machine-learning classification and hidden-data investigation"] },
 ];
 ```
 
 ### `education.ts` and `engagements.ts`
 ```ts
-export const education = [{ id: "kabarak", period: "Expected Dec 2026", title: "BSc Computer Security and Forensics", institution: "Kabarak University", notes: ["TODO: relevant modules, e.g. Digital Forensics, Network Security, Cryptography, Incident Response, Cyber Law"] }];
+export const education = [{ id: "kabarak", period: "Kabarak University", title: "BSc Computer Security and Forensics", institution: "Computer Security and Forensics", notes: ["Academic focus includes digital forensics, network security and computer security foundations."] }];
 export const training = [
   { id: "bandit", period: "Ongoing", title: "OverTheWire Bandit", institution: "Self-directed", notes: ["Linux command-line fundamentals"] },
   { id: "pwn", period: "Ongoing", title: "pwn.college", institution: "Self-directed", notes: ["Exploitation fundamentals"] },

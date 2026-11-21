@@ -3,7 +3,7 @@
 Copy this file to `.cursor/rules/portfolio.mdc` (or keep it in `/stages` and tell the agent to read it first in every chat).
 
 ## Project
-Single-page portfolio for Sammy Moseti Gesabo, a Computer Security & Forensics graduate (Kabarak University, expected Dec 2026). Audience: recruiters and hiring managers for SOC Analyst, Digital Forensic Investigator and Security Analyst roles in Kenya. Primary job of the page: show real security and engineering work in under a minute.
+Single-page portfolio for Sammy Moseti Gesabo, a Computer Security & Forensics specialist. Audience: recruiters and hiring managers for cybersecurity, IT infrastructure, digital forensics and security analysis roles in Kenya. Primary job of the page: show real security and engineering work in under a minute.
 
 ## Stack (do not change without asking)
 - Vite + React 18 + TypeScript (strict). Tailwind CSS. lucide-react icons.

@@ -1,3 +1,3 @@
 import type { EducationItem } from './types';
 
-export const education: EducationItem[] = [{ id: "kabarak", period: "Expected Dec 2026", title: "BSc Computer Security and Forensics", institution: "Kabarak University", notes: ["TODO: relevant modules, e.g. Digital Forensics, Network Security, Cryptography, Incident Response, Cyber Law"] }];
+export const education: EducationItem[] = [{ id: "kabarak", period: "Kabarak University", title: "BSc Computer Security and Forensics", institution: "Computer Security and Forensics", notes: ["Academic focus includes digital forensics, network security and computer security foundations."] }];

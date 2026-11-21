@@ -11,6 +11,7 @@ import { Toolbox } from './sections/Toolbox'
 import { TechnologyStrip } from './sections/TechnologyStrip'
 import { Lab } from './sections/Lab'
 import { KnowledgeBase } from './sections/KnowledgeBase'
+import { Credentials } from './sections/Credentials'
 
 export const App = () => {
   return (
@@ -28,6 +29,7 @@ export const App = () => {
         <Lab />
         <Journey />
         <Education />
+        <Credentials />
         <Engagements />
         <KnowledgeBase />
         <Contact />

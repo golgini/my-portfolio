@@ -4,7 +4,7 @@ type SectionTitleProps = {
 }
 
 export const SectionTitle = ({ first, accent }: SectionTitleProps) => (
-  <div className="space-y-3">
+  <div className="space-y-2">
     <h2 className="text-2xl font-semibold tracking-tight text-text sm:text-3xl">
       {first} <span className="text-accent">{accent}</span>
     </h2>

@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
 import { profile } from '../data/profile'
 import { isTodo } from '../data/utils'
 
@@ -13,6 +13,7 @@ export const Footer = () => (
         <a aria-label="LinkedIn profile" href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="rounded-md p-1.5 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"><Linkedin size={17} /></a>
         <a aria-label="Send email" href={`mailto:${profile.email}`} className="rounded-md p-1.5 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"><Mail size={17} /></a>
         {!isTodo(profile.github) && <a aria-label="GitHub profile" href={profile.github} target="_blank" rel="noopener noreferrer" className="rounded-md p-1.5 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"><Github size={17} /></a>}
+        <a aria-label="Contact on WhatsApp" href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer" className="rounded-md p-1.5 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"><MessageCircle size={17} /></a>
         <a href="#home" className="ml-2 inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-semibold hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"><ArrowUp size={15} />Back to top</a>
       </div>
     </div>
