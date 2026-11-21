@@ -99,6 +99,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes scanline { to { transform: translateY(430%); } }
 @keyframes terminal-reveal { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes cursor-blink { 50% { opacity: 0; } }
+@keyframes logo-pulse { 0%, 100% { transform: scale(.94); opacity: .35; } 50% { transform: scale(1.08); opacity: .85; } }
+@keyframes logo-orbit { to { transform: rotate(360deg); } }
+@keyframes technology-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 .reference-gradient-text {
   background: linear-gradient(90deg, var(--accent-secondary) 2%, var(--accent-pink) 98%);
@@ -131,7 +134,12 @@ html { scroll-behavior: smooth; }
 .site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(16px); }
 .brand-mark { display: inline-flex; align-items: center; gap: .65rem; color: var(--text); font-size: .78rem; font-weight: 800; letter-spacing: -.02em; }
 .brand-mark small { display: block; color: var(--muted); font: 600 .52rem/1 'Plus Jakarta Sans', sans-serif; letter-spacing: .16em; margin-top: .2rem; }
-.brand-mark-symbol { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border: 1px solid var(--text); border-radius: 50%; color: var(--accent); font-size: .7rem; letter-spacing: -.1em; }
+.brand-mark-symbol { position: relative; display: grid; place-items: center; width: 4rem; height: 4rem; margin: -.8rem 0; border: 2px solid var(--text); border-radius: 50%; color: var(--accent); font-size: 1rem; letter-spacing: -.1em; isolation: isolate; box-shadow: 9px 9px 0 var(--accent); transition: transform .25s ease, box-shadow .25s ease; }
+.brand-mark:hover .brand-mark-symbol { transform: translateY(-4px) rotate(-3deg); box-shadow: 12px 12px 0 var(--accent); }
+.brand-mark-symbol::before { content: ''; position: absolute; inset: -.25rem; z-index: -1; border: 1px solid var(--accent); border-radius: 50%; opacity: .45; animation: logo-pulse 3s ease-in-out infinite; }
+.brand-mark-symbol::after { content: ''; position: absolute; inset: -.45rem; z-index: -1; border: 1px dashed var(--border); border-radius: 50%; animation: logo-orbit 8s linear infinite; }
+.brand-mark-symbol.has-photo { overflow: hidden; }
+.brand-mark-symbol img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; filter: saturate(.85) contrast(1.05); }
 .nav-link { position: relative; color: var(--muted); font-size: .73rem; font-weight: 700; letter-spacing: .04em; transition: color .2s ease; }
 .nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -.55rem; height: 2px; background: var(--accent); transition: right .2s ease; }
 .nav-link:hover, .nav-link.is-active { color: var(--text); }
@@ -193,7 +201,9 @@ html { scroll-behavior: smooth; }
 .section-intro { max-width: 44rem; margin-top: .65rem; color: var(--muted); line-height: 1.8; }
 .technology-strip { display: flex; align-items: center; gap: 2rem; overflow: hidden; border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
 .technology-label { flex: 0 0 auto; color: var(--accent); font: 800 .62rem 'Plus Jakarta Sans', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
-.technology-list { display: flex; min-width: max-content; align-items: center; gap: clamp(1.2rem, 4vw, 3.2rem); color: var(--muted); font: 700 .75rem 'Courier New', monospace; }
+.technology-track { display: flex; width: max-content; align-items: center; gap: clamp(1.2rem, 4vw, 3.2rem); color: var(--muted); font: 700 .75rem 'Courier New', monospace; animation: technology-scroll 28s linear infinite; }
+.technology-marquee { min-width: 0; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.technology-track span::before { content: '·'; padding-right: .5rem; color: var(--accent); }
 .technology-list span::before { content: '·'; padding-right: .5rem; color: var(--accent); }
 .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(3rem, 8vw, 8rem); align-items: end; margin-top: 1.2rem; }
 .about-lead { max-width: 38rem; margin-top: 1rem; color: var(--text); font-size: clamp(1.2rem, 2vw, 1.7rem); line-height: 1.35; letter-spacing: -.03em; }
@@ -220,8 +230,8 @@ html { scroll-behavior: smooth; }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; }.hero-system { min-height: 28rem; }.lab-layout { grid-template-columns: 1fr; }.notes-grid { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { .expertise-grid { grid-template-columns: repeat(2, 1fr); }.about-grid, .contact-grid { grid-template-columns: 1fr; }.project-feature { gap: 2rem; }.project-feature.reverse .project-preview, .project-feature.reverse .project-copy { order: initial; } }
 @media (max-width: 560px) { .hero-copy h1 { font-size: clamp(2.55rem, 13vw, 4rem); }.hero-role span { display: none; }.hero-role { line-height: 1.7; }.hero-visual-stack { min-height: 31rem; padding-right: 0; }.hero-visual-stack .hero-system { min-height: 27rem; }.identity-card { right: .5rem; top: 1rem; width: 10rem; }.technical-card { left: .5rem; bottom: 0; }.system-status-card { top: .7rem; left: .7rem; }.hero-console { left: .7rem; right: .7rem; bottom: .7rem; font-size: .62rem; }.host-detail span { display: none; }.notes-grid { gap: 2rem; }.credential-preview > div { min-width: 9rem; margin-right: .5rem; padding-right: .5rem; }.credential-preview > div:last-child { border-right: 0; } }
-@media (max-width: 560px) { .technology-strip { overflow-x: auto; scrollbar-width: none; }.technology-strip::-webkit-scrollbar { display: none; }.technology-label { position: sticky; left: 0; background: var(--bg); padding-right: .8rem; }.expertise-grid { grid-template-columns: 1fr; }.project-preview { min-height: 18rem; }.project-feature { grid-template-columns: 1fr; } }
-@media (prefers-reduced-motion: reduce) { .terminal-line { animation: none; opacity: 1; }.nav-cta:hover, .button-primary:hover { transform: none; } }
+@media (max-width: 560px) { .brand-mark-symbol { width: 3.3rem; height: 3.3rem; margin: -.55rem 0; }.technology-strip { overflow-x: auto; scrollbar-width: none; }.technology-strip::-webkit-scrollbar { display: none; }.technology-label { position: sticky; left: 0; background: var(--bg); padding-right: .8rem; }.expertise-grid { grid-template-columns: 1fr; }.project-preview { min-height: 18rem; }.project-feature { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .terminal-line { animation: none; opacity: 1; }.technology-track { animation: none; transform: none; }.brand-mark-symbol::before, .brand-mark-symbol::after { animation: none; }.nav-cta:hover, .button-primary:hover { transform: none; } }
 
 .process-plate {
   transition: transform 200ms ease;

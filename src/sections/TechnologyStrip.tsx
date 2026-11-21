@@ -1,3 +1,17 @@
-const technologies = ['Python', 'Linux', 'Kali Linux', 'Wireshark', 'Git', 'JavaScript', 'HTML5', 'CSS3', 'Burp Suite']
+const technologies = [
+  'Python',
+  'React / TypeScript',
+  'HTML / CSS',
+  'Vite',
+  'Git / GitHub',
+  'Linux',
+  'Kali Linux',
+  'Windows 11',
+  'OpenSSH',
+  'TCP/IP',
+  'Windows Firewall',
+  'Wireshark',
+  'Nmap',
+]
 
-export const TechnologyStrip = () => <section className="technology-strip" aria-label="Technologies and tools"><span className="technology-label">Tools in the toolkit</span><div className="technology-list">{technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></section>
+export const TechnologyStrip = () => <section className="technology-strip" aria-label="Technology stack"><span className="technology-label">Tech stack</span><div className="technology-marquee"><div className="technology-track">{[...technologies, ...technologies].map((technology, index) => <span key={`${technology}-${index}`} aria-hidden={index >= technologies.length}>{technology}</span>)}</div></div></section>

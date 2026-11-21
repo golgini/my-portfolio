@@ -54,7 +54,7 @@ export const Navbar = () => {
   return (
     <header className="site-header">
       <nav aria-label="Primary navigation" className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
-        <a className="brand-mark" href="#home" onClick={closeMenu}><span className="brand-mark-symbol">SM</span><span>{profile.shortName}<small> / SECURITY &amp; IT</small></span>
+        <a className="brand-mark" href="#home" onClick={closeMenu}><span className={`brand-mark-symbol ${profile.photoUrl ? 'has-photo' : ''}`}>{profile.photoUrl ? <img src={profile.photoUrl} alt={`${profile.name} portrait`} /> : <span>SM</span>}</span><span>{profile.shortName}<small> / SECURITY &amp; IT</small></span>
         </a>
 
         <div className="hidden items-center gap-5 md:flex">
