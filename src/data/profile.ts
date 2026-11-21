@@ -1,7 +1,7 @@
 export const profile = {
   name: "Sammy Moseti Gesabo",
   shortName: "Sammy",
-  photoUrl: "/images/sammy-moseti-gesabo.jpg" as string | null,
+  photoUrl: "images/sammy-moseti-gesabo.jpg" as string | null,
   title: "Computer Security & Forensics Specialist",
   tagline: "Entry-level SOC Analyst, Digital Forensic Investigator or Security Analyst, with a long-term interest in security automation and threat detection.",
   location: "Nairobi, Kenya",
