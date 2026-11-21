@@ -1,6 +1,6 @@
 export type Project = {
   id: string; title: string; category: "Security" | "Machine Learning" | "Trading";
-  status: "In progress" | "Completed"; role: string; context: string;
+  status: "Planned" | "In progress" | "Completed"; role: string; context: string;
   description: string; highlights: string[]; tech: string[];
   links?: { repo?: string; demo?: string };
 };

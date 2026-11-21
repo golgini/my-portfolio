@@ -66,7 +66,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
           <div>
             <div className="flex flex-wrap gap-2">
               <span className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-semibold text-accent">{project.category}</span>
-              <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${project.status === 'In progress' ? 'bg-amber-500/15 text-amber-500' : 'bg-green-500/15 text-green-500'}`}>{project.status}</span>
+              <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${project.status === 'Completed' ? 'bg-green-500/15 text-green-500' : 'bg-amber-500/15 text-amber-500'}`}>{project.status}</span>
             </div>
             <h2 id="project-dialog-title" className="mt-5 text-2xl font-semibold leading-snug">{project.title}</h2>
             <p className="mt-2 text-sm text-muted">{project.role} · {project.context}</p>

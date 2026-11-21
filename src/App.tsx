@@ -8,6 +8,9 @@ import { Journey } from './sections/Journey'
 import { Process } from './sections/Process'
 import { Projects } from './sections/Projects'
 import { Toolbox } from './sections/Toolbox'
+import { TechnologyStrip } from './sections/TechnologyStrip'
+import { Lab } from './sections/Lab'
+import { KnowledgeBase } from './sections/KnowledgeBase'
 
 export const App = () => {
   return (
@@ -16,14 +19,17 @@ export const App = () => {
         Skip to content
       </a>
       <Navbar />
-      <main id="main-content" className="mx-auto max-w-6xl px-6">
-        <Hero />
+      <main id="main-content" className="mx-auto max-w-7xl px-5 sm:px-8">
+      <Hero />
+      <TechnologyStrip />
         <Process />
         <Toolbox />
         <Projects />
+        <Lab />
         <Journey />
         <Education />
         <Engagements />
+        <KnowledgeBase />
         <Contact />
       </main>
       <Footer />

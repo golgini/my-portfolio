@@ -16,7 +16,7 @@ export const ProjectCard = ({ project, onOpen }: ProjectCardProps) => {
       <button type="button" onClick={(event) => onOpen(event.currentTarget)} className="text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface">
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-semibold text-accent">{project.category}</span>
-          <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${project.status === 'In progress' ? 'bg-amber-500/15 text-amber-500' : 'bg-green-500/15 text-green-500'}`}>
+          <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${project.status === 'Completed' ? 'bg-green-500/15 text-green-500' : 'bg-amber-500/15 text-amber-500'}`}>
             {project.status}
           </span>
         </div>
