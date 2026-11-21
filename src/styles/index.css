@@ -45,7 +45,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .reveal-visible { opacity: 1; transform: translateY(0); }
-.project-reveal { display: contents; }
+.project-reveal { display: block; opacity: 1; transform: none; }
 .project-reveal:not(.reveal-visible) .project-feature { opacity: 0; transform: translateY(18px); }
 .project-reveal.reveal-visible .project-feature { opacity: 1; transform: translateY(0); transition: opacity 650ms ease var(--reveal-delay, 0ms), transform 650ms cubic-bezier(.2,.7,.2,1) var(--reveal-delay, 0ms); }
 
