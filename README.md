@@ -80,22 +80,6 @@ scripts/          Local validation scripts
 
 The numbered implementation notes are available in [`docs/implementation/`](docs/implementation/).
 
-## Deployment
-
-The project is ready to deploy as a Vite site on Vercel. Import the repository, select the Vite preset, and deploy with the default settings. No additional Vercel configuration is required.
-
-Live URL: `https://your-project.vercel.app/` *(replace after the first deployment)*
-
-To publish through GitHub and Vercel:
-
-```bash
-git branch -M main
-git remote add origin https://github.com/<your-username>/sammy-portfolio.git
-git push -u origin main
-```
-
-Then import the repository in Vercel and confirm the Vite build preset.
-
 ## License
 
 This project is released under the MIT License. See [`LICENSE`](LICENSE).
